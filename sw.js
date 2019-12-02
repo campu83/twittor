@@ -1,4 +1,5 @@
-const PATH_BASE ='/pwa/06-twittor/';
+//const PATH_BASE ='/pwa/06-twittor/';
+const PATH_BASE ='/';
 
 //imports
 importScripts(PATH_BASE+'js/sw-utils.js');

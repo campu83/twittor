@@ -5,7 +5,7 @@ if ( navigator.serviceWorker) {
     if ( url.includes('localhost')){
         swLocation='/pwa/06-twittor/sw.js';
     }
-    navigator.serviceWorker.register('/pwa/06-twittor/sw.js');
+    navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery

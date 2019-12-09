@@ -11,6 +11,12 @@
     font-size: 16px;
     background-color: #dde1e2; 
     width: 100%;
+    /* Para evitar que salga la recarga*/
+    overscroll-behavior-y: contain;
+    /* Para mejorar experiencia en iOS */
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 /* Personalizados */

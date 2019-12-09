@@ -62,7 +62,7 @@ self.addEventListener('activate', e => {
     
 });
 
-/*self.addEventListener('fetch', e => {
+self.addEventListener('fetch', e => {
 
     const respuesta = caches.match( e.request ).then( res => {
         if ( res ) {
@@ -76,4 +76,17 @@ self.addEventListener('activate', e => {
     });
 
     e.respondWith(respuesta);
-});*/
+});
+
+// Guardar en el cache dinamico
+function actualizaCacheDinamico( dynamicCache, req, res) {
+    if (res.ok){
+
+        caches.open( dynamicCache).then( cache => {
+            cache.put( req, res.clone());
+            return res.clone();
+        });
+    } else {
+        return res;
+    }
+}
